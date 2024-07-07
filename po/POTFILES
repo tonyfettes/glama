@@ -1,0 +1,6 @@
+data/com.tonyfettes.Glama.desktop.in
+data/com.tonyfettes.Glama.metainfo.xml.in
+data/com.tonyfettes.Glama.gschema.xml
+src/main.py
+src/window.py
+src/window.ui
