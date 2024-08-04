@@ -19,7 +19,6 @@
 
 from gi.repository import Adw
 from gi.repository import Gtk
-from openai import OpenAI
 
 @Gtk.Template(resource_path='/com/tonyfettes/Glama/window.ui')
 class GlamaWindow(Adw.ApplicationWindow):
@@ -27,12 +26,8 @@ class GlamaWindow(Adw.ApplicationWindow):
 
     label = Gtk.Template.Child()
 
-    client: OpenAI
-
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-
-        self.client = OpenAI()
 
     @Gtk.Template.Callback()
     def button_clicked(self, *args):
