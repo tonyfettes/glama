@@ -4,5 +4,6 @@ Exec=glama
 Icon=com.tonyfettes.Glama
 Terminal=false
 Type=Application
-Categories=GTK;
+Categories=Utility;
 StartupNotify=true
+Comment=Glama is a GUI of ollama.

@@ -3,6 +3,9 @@
   "runtime": "org.gnome.Platform",
   "runtime-version": "46",
   "sdk": "org.gnome.Sdk",
+  "sdk-extensions": [
+    "org.freedesktop.Sdk.Extension.rust-stable"
+  ],
   "command": "glama",
   "finish-args": [
     "--share=network",
@@ -11,6 +14,12 @@
     "--device=dri",
     "--socket=wayland"
   ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "build-args": [
+      "--share=network"
+    ]
+  },
   "cleanup": [
     "/include",
     "/lib/pkgconfig",
@@ -23,14 +32,18 @@
     "*.a"
   ],
   "modules": [
+    "python3-typing_extensions.json",
+    "python3-setuptools_rust.json",
+    "python3-maturin.json",
+    "python3-openai.json",
     {
       "name": "glama",
       "builddir": true,
       "buildsystem": "meson",
       "sources": [
         {
-          "type": "git",
-          "url": "file:///home/tonyfettes/projects/glama-python"
+          "type": "dir",
+          "path": "."
         }
       ]
     }

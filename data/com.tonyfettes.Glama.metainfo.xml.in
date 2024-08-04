@@ -3,6 +3,8 @@
 	<id>com.tonyfettes.Glama.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
 	<project_license>GPL-3.0-or-later</project_license>
+  <name>Glama</name>
+  <summary>Glama is a GUI of ollama.</summary>
 	<description>
 	  <p>No description</p>
 	</description>
